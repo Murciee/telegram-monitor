@@ -1,0 +1,11 @@
+services:
+  telegram-bot:
+    build: .
+    container_name: my-telegram-bot
+    restart: always                   # 遇到崩溃或服务器重启时，自动重新启动程序
+    ports:
+      - "9000:9000"                   # 端口映射
+    env_file:
+      - .env                          # 自动读取环境变量
+    volumes:
+      - .:/app                        # ⚠️ 关键设置：挂载当前目录。这能确保 Telethon 登录 Telegram 时生成的 .session 文件保存在宿主机，容器重启后不用重新扫码或接验证码
