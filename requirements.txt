@@ -46,3 +46,5 @@ asyncio-mqtt>=0.11.1
 
 # 兼容支持
 importlib_metadata
+
+python-multipart
