@@ -99,6 +99,8 @@ WEB_PASSWORD=admin123
 
 5. **启动系统**
 ```bash
+# docker启动
+docker composed up -d 
 # 启动Web界面
 python3 web_app_launcher.py
 
